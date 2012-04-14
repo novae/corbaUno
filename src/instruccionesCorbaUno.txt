@@ -1,0 +1,12 @@
+//corba 1
+cd C:\Users\TEC\Dropbox\IAD\entregar IAD\corbaUno\src
+idlj -fall Hello.idl 
+javac *.java
+orbd -ORBInitialPort 1080
+
+
+cd C:\Users\TEC\Dropbox\IAD\entregar IAD\corbaUno\src
+java HelloServer -ORBInitialPort 1080 -ORBInitialHost localhost
+
+cd C:\Users\TEC\Dropbox\IAD\entregar IAD\corbaUno\src
+java HelloClient -ORBInitialPort 1080 -ORBInitialHost localhost
