@@ -1,6 +1,7 @@
 
 
 import HelloApp.*;
+import javax.swing.JOptionPane;
 import org.omg.CosNaming.*;
 import org.omg.CosNaming.NamingContextPackage.*;
 import org.omg.CORBA.*;
@@ -17,6 +18,7 @@ public class HelloClient{
                 
                 HelloImpl=HelloHelper.narrow(ncRef.resolve_str(name));
                 System.out.println(HelloImpl.sayHello());
+                JOptionPane.showConfirmDialog(null,"TERMINAR SERVICIO ?");
                 HelloImpl.shutdown();
                 
             
